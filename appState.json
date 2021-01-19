@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "s3-translation-uploader.js",
         "cursor": {
-          "lineNumber": 39,
-          "column": 63
+          "lineNumber": 48,
+          "column": 3
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -22,7 +22,12 @@
           "layers": [],
           "name": "s3TranslationUploader"
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "apigSampleTranslatortranslateaddpost",
+            "config": {}
+          }
+        ],
         "lastUpdated": 1611042841933,
         "testCases": {
           "1501d64c-00f7-4654-ba4b-20a5196d5588": {
@@ -53,6 +58,25 @@
           "bucket": {
             "name": "translator.sample.bucket"
           }
+        }
+      },
+      "apigSampleTranslatortranslateaddpost": {
+        "name": "apigSampleTranslatortranslateaddpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "apiType": 1,
+          "apiMode": 0,
+          "apiName": "SampleTranslator",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "translate/add",
+          "resourcePath": "/translate/add",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
         }
       }
     },
@@ -93,7 +117,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1611045313852
+    "lastSave": 1611045606391
   },
   "VCS_STATE": {
     "provider": "GitHub",
