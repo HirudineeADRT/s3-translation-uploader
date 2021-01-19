@@ -42,7 +42,7 @@ exports.handler = async (event) => {
     } catch (err) {
             msg = `Unable to save the object in to the S3 bucket: ${err}`;
             console.log(msg);
-
+            throw(err);
     };
 
 };

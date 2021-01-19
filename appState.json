@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "s3-translation-uploader.js",
         "cursor": {
-          "lineNumber": 11,
-          "column": 95
+          "lineNumber": 45,
+          "column": 24
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -119,7 +119,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1611052036712
+    "lastSave": 1611052252392
   },
   "VCS_STATE": {
     "provider": "GitHub",
