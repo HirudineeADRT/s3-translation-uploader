@@ -1,0 +1,8 @@
+{
+  "name": "s3-translation-uploader",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "2.817.0"
+  }
+}

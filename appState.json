@@ -1,0 +1,105 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "f1691169-e2ef-4791-8442-60bcf4ead98d": {
+        "id": "f1691169-e2ef-4791-8442-60bcf4ead98d",
+        "parent": null,
+        "name": "s3-translation-uploader.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "s3-translation-uploader.js",
+        "cursor": {
+          "lineNumber": 39,
+          "column": 63
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "s3TranslationUploader"
+        },
+        "triggers": [],
+        "lastUpdated": 1611042841933,
+        "testCases": {
+          "1501d64c-00f7-4654-ba4b-20a5196d5588": {
+            "id": "1501d64c-00f7-4654-ba4b-20a5196d5588",
+            "name": "Test event",
+            "functionId": "f1691169-e2ef-4791-8442-60bcf4ead98d",
+            "event": "{\r\n    \"data\": \"كيف حالكم\",\r\n    \"filename\": \"test001.txt\",\r\n    \"language\": \"ar\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "f1691169-e2ef-4791-8442-60bcf4ead98d"
+    ],
+    "currentFileId": "f1691169-e2ef-4791-8442-60bcf4ead98d",
+    "resources": {
+      "translateResource": {
+        "name": "translateResource",
+        "type": "Translate",
+        "config": {}
+      },
+      "s3translatorsamplebucket": {
+        "name": "s3translatorsamplebucket",
+        "type": "S3",
+        "config": {
+          "mode": 0,
+          "bucket": {
+            "name": "translator.sample.bucket"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.817.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.5.1",
+    "projectName": "s3-translation-uploader",
+    "projectDescription": "This Project translates data received from API Gateway to English and uploads translated scripts as text files to an S3 bucket.",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1611045313852
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "s3-translation-uploader",
+      "url": "https://github.com/HirudineeADRT/s3-translation-uploader"
+    }
+  }
+}
