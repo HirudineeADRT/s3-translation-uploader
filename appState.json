@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "s3-translation-uploader.js",
         "cursor": {
-          "lineNumber": 48,
-          "column": 3
+          "lineNumber": 11,
+          "column": 95
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -34,9 +34,21 @@
             "id": "1501d64c-00f7-4654-ba4b-20a5196d5588",
             "name": "Test event",
             "functionId": "f1691169-e2ef-4791-8442-60bcf4ead98d",
-            "event": "{\r\n    \"data\": \"كيف حالكم\",\r\n    \"filename\": \"test001.txt\",\r\n    \"language\": \"ar\"\r\n}",
+            "event": "{\r\n    \"data\": \"كيف حالكم\",\r\n    \"filename\": \"test010.txt\",\r\n    \"language\": \"ar\"\r\n}",
             "eventTemplate": "hello-world"
           }
+        },
+        "customSecurityPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*/*",
+              "Action": [
+                "s3:PutObject"
+              ]
+            }
+          ]
         }
       }
     },
@@ -49,16 +61,6 @@
         "name": "translateResource",
         "type": "Translate",
         "config": {}
-      },
-      "s3translatorsamplebucket": {
-        "name": "s3translatorsamplebucket",
-        "type": "S3",
-        "config": {
-          "mode": 0,
-          "bucket": {
-            "name": "translator.sample.bucket"
-          }
-        }
       },
       "apigSampleTranslatortranslateaddpost": {
         "name": "apigSampleTranslatortranslateaddpost",
@@ -117,7 +119,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1611045606391
+    "lastSave": 1611052036712
   },
   "VCS_STATE": {
     "provider": "GitHub",

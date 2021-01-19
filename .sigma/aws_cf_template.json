@@ -44,12 +44,6 @@
     }
   },
   "Resources": {
-    "s3translatorsamplebucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "BucketName": "translator.sample.bucket"
-      }
-    },
     "apigSampleTranslator": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
@@ -185,17 +179,17 @@
               "Statement": [
                 {
                   "Effect": "Allow",
+                  "Resource": "*",
                   "Action": [
                     "translate:translateText"
-                  ],
-                  "Resource": "*"
+                  ]
                 },
                 {
                   "Effect": "Allow",
+                  "Resource": "arn:aws:s3:::*/*",
                   "Action": [
                     "s3:PutObject"
-                  ],
-                  "Resource": "arn:aws:s3:::translator.sample.bucket/*"
+                  ]
                 }
               ]
             }
@@ -225,7 +219,7 @@
         "Principal": "apigateway.amazonaws.com"
       }
     },
-    "apigSampleTranslatorDeployment1611045616164": {
+    "apigSampleTranslatorDeployment1611052090152": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

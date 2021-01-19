@@ -8,6 +8,7 @@ exports.handler = async (event) => {
     let sourceLanguage = event.language;
     let fileName = event.filename;
     let s3Content = await translateInputData();
+    let bucketName = "induuuu" // ** Please rename the bucket name to one of your own buckets **
 
     async function translateInputData() {
         try {
@@ -18,7 +19,7 @@ exports.handler = async (event) => {
             }).promise();
 
             let translateText = data.TranslatedText;
-            console.log(translateText);
+            console.log("This is the translation : "+ translateText);
             return (translateText);
 
         } catch (err) {
@@ -30,12 +31,12 @@ exports.handler = async (event) => {
 
     try {
         let data = await s3.putObject({
-            Bucket: "translator.sample.bucket",
+            Bucket: bucketName,
             Key: fileName,
             Body: s3Content,
             Metadata: {}
         }).promise();
-        console.log(data);
+        console.log(`The object ${fileName} is successfully saved to the S3 bucket ${bucketName}`);
         return { "message": "Translated Text : "+ s3Content };
 
     } catch (err) {
@@ -44,5 +45,4 @@ exports.handler = async (event) => {
 
     };
 
-    //return { "message": "Successfully executed" };
 };
