@@ -219,7 +219,7 @@
         "Principal": "apigateway.amazonaws.com"
       }
     },
-    "apigSampleTranslatorDeployment1611052263038": {
+    "apigSampleTranslatorDeployment1621581055196": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {

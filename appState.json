@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "s3-translation-uploader.js",
         "cursor": {
-          "lineNumber": 45,
-          "column": 24
+          "lineNumber": 21,
+          "column": 28
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -28,7 +28,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1611042841933,
+        "lastUpdated": 1621580897299,
         "testCases": {
           "1501d64c-00f7-4654-ba4b-20a5196d5588": {
             "id": "1501d64c-00f7-4654-ba4b-20a5196d5588",
@@ -85,7 +85,7 @@
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -111,7 +111,7 @@
     }
   },
   "PROJECT_META": {
-    "sigmaVersion": "1.5.1",
+    "sigmaVersion": "1.7.4",
     "projectName": "s3-translation-uploader",
     "projectDescription": "This Project translates data received from API Gateway to English and uploads translated scripts as text files to an S3 bucket.",
     "projectVersion": "1.0.0",
@@ -119,7 +119,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1611052252392
+    "lastSave": 1621581024638
   },
   "VCS_STATE": {
     "provider": "GitHub",
